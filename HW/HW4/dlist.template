@@ -1,0 +1,378 @@
+/*************************************************************
+    Lab8		CS2401		Spring 2017
+    Jonathan Feige
+    template for template array
+**************************************************************/
+
+#include<cstdlib>
+#include<iostream>
+#include<iostream>
+#include "node.h"
+
+using namespace std;
+
+template<class T>
+dlist<T>::dlist()
+{
+	head = NULL;
+	tail = NULL;
+	count = 0;
+}
+
+template<class T>
+dlist<T>::~dlist(){
+	node<T>* rmptr;
+    while(head != NULL){
+	rmptr=head;
+	head = head->link_next();
+	delete rmptr;
+   }
+   head = NULL;
+   tail = NULL;
+}
+
+template<class T>
+dlist<T>::dlist(const dlist &other){
+node<T> * h;
+node<T> * sptr;
+node<T> * dptr;
+	if(other.head==NULL)
+	{
+		head==NULL;
+	}
+		else
+	{
+		head=new node<T>;
+		head->set_data(other.head->data());
+		head->set_next(NULL);
+		head->set_pre(NULL);
+		sptr = other.head;
+		sptr = sptr->link_next();
+		dptr = head;
+		while(sptr != NULL)
+		{
+			h = dptr;
+			dptr-> set_next(new node<T>);
+			dptr -> set_data(sptr->data());
+			sptr = sptr->link_next();
+			dptr = dptr->link_next();
+			dptr->set_pre(h);
+			count++;
+		}
+		tail = dptr;
+	}
+}
+
+template<class T>
+void dlist<T>::operator =(dlist& other){
+node<T>* rmptr;
+while(head != NULL)
+{
+	rmptr=head;
+	head = head->link_next();
+	delete rmptr;
+}
+head = NULL;
+tail = NULL;
+
+node<T> * h;
+if(other.head==NULL)
+	{
+		head==NULL;
+	}
+else
+	{
+		head=new node<T>;
+		head->set_data(other.head->data());
+		head->set_next(NULL);
+		head->set_pre(NULL);
+		node<T> * sptr = other.head->link_next();
+		node<T> * dptr = head;
+		while(sptr != NULL)
+			{
+				h = dptr;
+				dptr-> set_next(new node<T>);
+				dptr = dptr->link_next();
+				dptr->set_data(sptr->data());
+				sptr = sptr->link_next();
+				dptr-> set_pre(h);
+				dptr-> set_next(NULL);
+			}
+			tail = dptr;
+			count = other.count;
+	}
+}
+
+template<class T>
+void dlist<T>::front_insert(T& c)
+{
+	node<T> * tmp;
+	node<T> * hold;
+    if(tail == NULL)
+    	{
+        	tail = new node<T>;
+        	tail -> set_data(c);
+        	tail -> set_next(NULL);
+        	tail -> set_pre(NULL);
+        	head =  tail;
+        	count++;
+        	return;
+    	}
+    else
+    	{	
+        	tmp = tail;
+			tmp -> set_next(new node<T>);
+        	tmp = tmp->link_next();
+        	tmp-> set_next(NULL);
+        	tmp-> set_data(c);
+        	tmp -> set_pre(tail);
+        	tail = tmp;
+        	count++;
+			return;
+		}
+}
+
+template<class T>
+void dlist<T>::rear_insert(T& c)
+{
+	node<T> * tmp;
+	node<T> * hold;
+    if(head == NULL)
+    	{
+        	head = new node<T>;
+        	head -> set_data(c);
+        	head -> set_pre(NULL);
+        	head -> set_next(NULL);
+        	tail = head;
+        	count++;
+        	return;
+    	}
+    else
+    	{	
+        	tmp = head;
+			tmp -> set_pre(new node<T>);
+        	tmp = tmp->link_back();
+        	tmp-> set_pre(NULL);
+        	tmp-> set_data(c);
+        	tmp -> set_next(head);
+        	head = tmp;
+        	count++;
+			return;
+		}
+}
+
+template<class T>
+void dlist<T>::show()
+{
+	node<T> *tmp;
+	for(tmp = head; tmp != NULL; tmp = tmp->link_next())
+	{
+       cout<<tmp->data();
+	   cout<<"\n";
+	}
+}
+
+template<class T>
+void dlist<T>::reverse_show()
+{
+	node<T> *tmp;
+	for(tmp = tail; tmp != NULL; tmp = tmp->link_back())
+	{
+       cout<<tmp->data();
+	   cout<<"\n";
+	}
+}
+
+template<class T>
+void dlist<T>::front_remove()
+{
+	if (head == NULL)
+	{
+	return;
+	}
+	if(head->link_next() == NULL)
+	{
+	head = NULL;
+	tail = NULL;
+	count=0;
+	return;
+	}
+	node<T> * del;
+	del = head;
+	head = head->link_next();
+	del -> set_next(NULL);
+	head -> set_pre(NULL);
+	delete del;
+	count--;
+	return;
+}
+
+
+template<class T>
+void dlist<T>::rear_remove()
+{
+	if (tail == NULL)
+	{
+	return;
+	}
+	
+	if(tail->link_back() == NULL)
+	{
+	tail = NULL;
+	head = NULL;
+	count=0;
+	return;
+	}
+
+	node<T> * del;
+	node<T> * tmp;
+	del = tail;
+	tail = tail->link_back();
+	del -> set_pre(NULL);
+	tail -> set_next(NULL);
+	count--;
+	delete del;
+}
+
+template<class T>
+void dlist<T>::remove(iterator it)
+{
+	node<T> * n;
+	node<T> * p;
+	node<T> * cursor;
+	cursor = it.get_current();
+	n = cursor;
+	p = cursor;
+
+	if (cursor -> link_back() == NULL)
+	{
+	p = cursor;
+	cursor = cursor->link_next();
+	p -> set_next(NULL);
+	cursor -> set_pre(NULL);
+	delete p;
+	head = cursor;
+	count--;
+	return;
+	}
+
+	if (cursor -> link_next() == NULL)
+	{
+	n = cursor;
+	cursor = cursor->link_back();
+	n -> set_pre(NULL);
+	cursor -> set_next(NULL);
+	tail = cursor;
+	count--;
+	delete n;
+	return;
+	}
+
+	p = cursor->link_back();
+	n = cursor->link_next();
+	p -> set_next(n);
+	n -> set_pre(p);
+	delete cursor;
+	count--;
+	return;
+}
+    	
+template<class T>
+void dlist<T>::insert_before(iterator it, T item)
+{
+	node<T> * n;
+	node<T> * p;
+	node<T> * cursor;
+	cursor = it.get_current();
+	if(head == NULL && tail == NULL)
+    	{
+        	tail = new node<T>;
+        	tail -> set_data(item);
+        	tail -> set_pre(NULL);
+        	tail -> set_next(NULL);
+        	head = tail;
+        	count++;
+        	return;
+    	}
+
+    n = cursor;
+	p = cursor;
+    if(cursor->link_back() == NULL)
+    {
+    cursor->set_pre(new node<T>);
+	cursor = cursor->link_back();
+	cursor -> set_data(item);
+	cursor->set_pre(NULL);
+	cursor->set_next(n);
+	head = cursor;
+	count++;
+	return;
+    }
+    
+    if(cursor->link_next() == NULL)
+    {
+    p = cursor->link_back();
+    n = cursor;
+    cursor->set_pre(new node<T>);
+	cursor = cursor->link_back();
+	cursor -> set_data(item);
+	cursor->set_pre(p);
+	cursor->set_next(n);
+	p->set_next(cursor);
+	tail = n;
+	count++;
+	return;
+    }
+    p=cursor->link_back();
+    n=cursor->link_next();
+	cursor->set_pre(new node<T>);
+	cursor = cursor->link_back();
+	cursor -> set_data(item);
+	cursor -> set_pre(p);
+	cursor -> set_next(n);
+	p -> set_next(cursor);
+	count++;
+	return;
+}
+
+template<class T>
+void dlist<T>::insert_after(iterator it, T item)
+{
+	node<T> * n;
+	node<T> * p;
+	node<T> * cursor;
+	cursor = it.get_current();
+if(head == NULL && tail == NULL)
+    	{
+        	tail = new node<T>;
+        	tail -> set_data(item);
+        	tail -> set_pre(NULL);
+        	tail -> set_next(NULL);
+        	head = tail;
+        	count++;
+        	return;
+    	}
+	n = cursor;
+	p = cursor;
+	if(cursor->link_next() == NULL)
+    {
+    cursor->set_next(new node<T>);
+	cursor = cursor->link_next();
+	cursor -> set_data(item);
+	cursor->set_pre(p);
+	cursor->set_next(NULL);
+	tail = cursor;
+	count++;
+	return;
+    }
+
+	n = cursor -> link_next();
+	cursor->set_next(new node<T>);
+	cursor = cursor->link_next();
+	cursor -> set_data(item);
+	cursor -> set_next(n);
+	cursor -> set_pre(p);
+	n -> set_pre(cursor);
+	count++;
+	return;
+}

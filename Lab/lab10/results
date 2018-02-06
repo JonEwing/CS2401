@@ -1,0 +1,72 @@
+Script started on Fri 03 Nov 2017 12:31:07 AM EDT
+jfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+12 678 9 5 + 4 * 8 / +
+12
+679
+5
+684
+4
+2736
+8
+342
+354
+The answer is: 354
+Enter another equation?(y or n)n
+jfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+334  4 6 + 16 * 18 -
+34
+6
+40
+16
+640
+18
+622
+The answer is: 622
+Enter another equation?(y or n)y
+Please enter your expression:
+Error. Insufficient operators for operands.
+jfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+12 6 - 8 + 7 * +
+12
+6
+6
+8
+14
+7
+98
+Error. Insufficient operators for operands.
+jfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+56 78 84 + 33 *
+56
+78
+84
+162
+33
+5346
+Too Many values left in the Stringjfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+2 + 2 2 + +
+2
+2
+2
+4
+6
+The answer is: 6
+Enter another equation?(y or n)n
+jfeige@pu1:~/2401/Labs/lab10$ ./a.out
+Please enter your expression:
+567890 -1234     134 345-  - * 
+567890
+134
+345
+-211
+-119824790
+The answer is: -119824790
+Enter another equation?(y or n)n
+jfeige@pu1:~/2401/Labs/lab10$ exit
+
+Script done on Fri 03 Nov 2017 12:33:39 AM EDT

@@ -1,0 +1,79 @@
+CS2401 	Fall 2017	Lab 3 Answers	Name: Jonathan Feige		
+The numbers below line up with the numbers on your lab instruction sheet.
+
+
+
+Part One: 7
+
+*
+*
+*
+*
+*
+*
+
+
+Part One: 10
+
+*
+**
+***
+****
+*****
+******
+
+
+Part One: 11
+
+It made the value of x go up every time the pretty() function is called making x =1 then 2 then 3, 
+instead of how it was where x was set to 0 then 1 each time
+
+
+
+Part One: 12
+
+*
+*
+*
+*
+*
+*
+
+
+Part Two: 4
+
+0x12813e0
+
+
+Part Two: 5
+
+0xecfe10
+
+
+Part Two: 8
+
+2403is stored at 0x14713e0
+2511is stored at 0x14713e0
+
+
+Part Two: 11
+
+0is stored at 0x12a0004
+0is stored at 0x12a0000
+
+
+Part Two: 13
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400aa9 in main () at main.cc:25
+25                              cout << *ptr << "is stored at " <<ptr<<endl;
+
+
+What are the three different storage methods for variables in C++?
+
+Static variable - allocated before program runs and deallocated when out of scope.
+Automatic variable - Allocated in scope and deallocated out of scope.
+Dynamic variable - explicitly allocated and deallocated by the program.
+
+
+Submit your source code and this answer sheet on Blackboard.

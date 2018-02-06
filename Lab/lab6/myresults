@@ -1,0 +1,16 @@
+Script started on Wed 04 Oct 2017 11:39:17 PM EDT
+jfeige@pu1:~/2401/Labs/lab6$ ./a.out
+Now showing list One:
+Charlie  Lisa  Drew  Derrick  AJ  Bojian  
+Enter a name to search:Drew
+That name is stored at address: 0x9d8c80
+Drew  Derrick  AJ  Bojian  Charlie  Lisa  
+jfeige@pu1:~/2401/Labs/lab6$ ./a.out
+Now showing list One:
+Charlie  Lisa  Drew  Derrick  AJ  Bojian  
+Enter a name to search:notDrew
+That name is not in the list.
+Drew  Derrick  AJ  Bojian  Charlie  Lisa  
+jfeige@pu1:~/2401/Labs/lab6$ exit
+
+Script done on Wed 04 Oct 2017 11:39:38 PM EDT

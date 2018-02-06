@@ -1,0 +1,35 @@
+CS2401	Fall 2014	LAB Five Answer Sheet	Name:
+
+1)
+It stores an unsigned long and a pointer
+
+
+2)
+It stores the class simple
+
+
+3)
+
+
+
+4)
+It will have to deconstruct the data array and the array.pr which is a sub array of simple.
+
+
+5)
+It will have to copy both the data array and the array.pr which is a sub array of simple.
+
+
+6)
+The short life is used to get the data while the long life displays it
+
+
+7)
+valuses followed by their squares in parenthises
+
+
+8)
+The program crashed
+
+
+9)

@@ -1,0 +1,60 @@
+Script started on Tue 07 Nov 2017 04:53:56 PM EST
+jfeige@pu1:~/2401/Labs/lab11$ ./a.out
+What is the chore you need to do?
+Dishes  
+
+What is the priority of ths chore?
+2
+
+ Enter a new chore?
+(Y or N)
+Y
+What is the chore you need to do?
+Clean Room
+
+What is the priority of ths chore?
+5
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Dinner
+
+What is the priority of ths chore?
+10
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Vacuum
+
+What is the priority of ths chore?
+1
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Day Off
+
+What is the priority of ths chore?
+-1
+
+ Enter a new chore?
+(Y or N)
+N
+
+Dishes
+2
+Clean Room
+5
+Dinner
+10
+Vacuum
+1
+Day Off
+-1
+
+Script done on Tue 07 Nov 2017 04:55:22 PM EST

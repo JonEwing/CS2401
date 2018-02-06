@@ -1,0 +1,50 @@
+Script started on Thu 31 Aug 2017 01:11:51 PM EDT
+jfeige@odd25:~/2401/Labs/Lab1$ g++ makefile-c -Wall main.cc my-int.cc_intc.cc[1P-int.ccmakefile[K[Kg++ makefile-c -Wall main.cc my-int.cc_intc.cc[1P-int.ccmakefile[K[Ka.[K[K./.a[K[Ka.out
+Enter a time, hours, then minutes
+2
+1
+Enter a second time, hours, then minutes
+3
+1
+
+Addidtion of times
+5:02
+Subtraction of times
+1:00
+Division of times
+
+What integer do you want to devide by?
+2
+1:00
+Multiplication of times
+
+What integer do you want to multiply by?
+4
+8:04
+times are not equal.
+jfeige@odd25:~/2401/Labs/Lab1$ ./a.out
+Enter a time, hours, then minutes
+1
+1
+Enter a second time, hours, then minutes
+1
+1
+
+Addidtion of times
+2:02
+Subtraction of times
+0:00
+Division of times
+
+What integer do you want to devide by?
+23
+0:02
+Multiplication of times
+
+What integer do you want to multiply by?
+4
+4:04
+Times are equal.
+jfeige@odd25:~/2401/Labs/Lab1$ exit
+
+Script done on Thu 31 Aug 2017 01:13:11 PM EDT

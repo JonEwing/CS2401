@@ -1,0 +1,85 @@
+CS2401 	Fall 2017 	Answer Sheet		Name: Jonathan Feige			
+
+The numbers below line up with the numbers on your lab instruction sheet.
+
+1
+
+1596976
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+then again only the last two numbers are 15 then 14
+
+2
+it is a problem because it is copying a pointer and not the array
+
+3
+just including the = without definition
+
+4
+19488304
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+19488304
+
+2
+
+4
+
+6
+
+8
+
+5
+
+10
+
+15
+
+
+5
+The values in array 2 changed
+
+6
+It is different because the array was correctly copied and changed
+
+7
+15
+0x00000000025e0090
+
+
+8
+because the arrays were never delected adn locked up memory
+
+9
+Deleting the old array when making new ones
+
+10
+
+
+Submit your source code and this answer sheet on Blackboard.

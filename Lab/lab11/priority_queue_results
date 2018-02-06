@@ -1,0 +1,61 @@
+Script started on Tue 07 Nov 2017 04:51:47 PM EST
+jfeige@pu1:~/2401/Labs/lab11$ script results[5Pgdb a.out++ -g stackmain.cc calc_useful.cc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb a.out[K++ -g stackmain.cc calc_useful.cc[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdb a.out[Kscript results[Ka[K./a.out
+What is the chore you need to do?
+Dishes
+
+What is the priority of ths chore?
+2
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Clean Room
+
+What is the priority of ths chore?
+5
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Dinner
+
+What is the priority of ths chore?
+10
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+Vacuume 
+
+What is the priority of ths chore?
+1
+
+ Enter a new chore?
+(Y or N)
+y
+What is the chore you need to do?
+day     Day OFF  ff
+
+What is the priority of ths chore?
+-1
+
+ Enter a new chore?
+(Y or N)
+n
+
+Dinner
+10
+Clean Room
+5
+Dishes
+2
+Vacuum
+1
+Day Off
+-1
+jfeige@pu1:~/2401/Labs/lab11$ exit
+
+Script done on Tue 07 Nov 2017 04:53:24 PM EST

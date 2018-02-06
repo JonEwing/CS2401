@@ -1,0 +1,39 @@
+Script started on Thu 30 Nov 2017 01:34:33 PM EST
+jfeige@odd19:~/2401/Labs/Lab13$ ./a.out
+Enter a number: 23
+The even numbers counting to there:
+n: 0
+n: 2
+n: 4
+n: 6
+n: 8
+n: 10
+n: 12
+n: 14
+n: 16
+n: 18
+n: 20
+n: 22
+Enter a number: 18
+The even numbers counting to there:
+n: 0
+n: 2
+n: 4
+n: 6
+n: 8
+n: 10
+n: 12
+n: 14
+n: 16
+n: 18
+Enter a number: -2
+The even numbers counting to there:
+Enter a string:
+go bobcats
+Now enter two numbers that are within the bounds of the string.3
+7
+This is how your words look now:
+go acbobts
+jfeige@odd19:~/2401/Labs/Lab13$ exit
+
+Script done on Thu 30 Nov 2017 01:35:26 PM EST
